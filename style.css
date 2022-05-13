@@ -3,3 +3,23 @@
     padding: 0;
     box-sizing: border-box;
 }
+body {
+    height: 100vh;
+    display: flex;
+    background: #164C45;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 8vh;
+    width: 100vw;
+    border: #E3C75F dotted 5px;
+}
+
+p {
+    font-size: 40px;
+    color: #bbc7c6;
+    /* border: silver solid; */
+}
