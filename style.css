@@ -4,8 +4,9 @@
     box-sizing: border-box;
 }
 body {
-    height: 100vh;
+    height: 100%;
     display: flex;
+    flex-wrap: wrap;
     background: #164C45;
 }
 
@@ -14,12 +15,38 @@ nav {
     justify-content: center;
     align-items: center;
     height: 8vh;
-    width: 100vw;
+    width: 100%;
+    padding: 5px;
+    margin: 30px;
     border: #E3C75F dotted 5px;
 }
 
-p {
+nav p {
     font-size: 40px;
     color: #bbc7c6;
-    /* border: silver solid; */
+    width: 100%;
+}
+
+main {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    border: silver solid;
+}
+.display {
+    display: flex;
+    border: #E3C75F dotted 5px;
+    padding: 5px;
+    margin: 30px;
+    width: 100%;
+    height: 30vh;
+}
+
+.keyboard {
+    display: flex;
+    border: #E3C75F dotted 5px;
+    padding: 5px;
+    margin: 30px;
+    width: 100%;
+    height: 30vh;
 }
