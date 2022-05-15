@@ -9,15 +9,26 @@ for (let i = 0; i < 27; i++) {
 
 //! ----------------------------- Keyboard Mockup ---------------------------- */
 
+let qwerty =['Q','W','E','R','T','Y','U','I','O','P'];
+
+
 let keyboard = document.querySelector("#keyboard");
 
-for (let k = 0; k < 26; k++) {
+//!QWERTYUIOP
+for (let k = 0; k < 10; k++) {
   let key = document.createElement("div");
   key.classList.add("key");
-  key.id = k;
-  key.innerText = k;
-  key.addEventListener('click', ()=>{
-                 //!The innerText is compared to word array
-  })
+  key.id = qwerty[k];
+  key.innerText = qwerty[k];
+  // key.addEventListener('click', ()=>{
+  // })
   keyboard.append(key);
 }
+
+
+//!ASDFGHJKL
+
+
+//!ZXCVBNM
+
+//! ------------------------- Cold Emptiness of Space ------------------------ */
