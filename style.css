@@ -85,13 +85,46 @@ main {
     margin: 30px;
     width: 100%;
     height: 30vh;
-    /* font-size: 100px; */
-    
+}
+
+.qwerty{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    border: #E3C75F solid 2px;
+}
+
+.asdfgh{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    border: #E3C75F solid 2px;
+}
+
+.spacebar{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    border: #E3C75F solid 2px;
+}
+
+.spacebar .key {
+    width: 40%;
+}
+
+.zxcvbn {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    border: #E3C75F solid 2px;
+
 }
 
 
 .key {
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: white;
     height: 30px;
     width: 30px ;
