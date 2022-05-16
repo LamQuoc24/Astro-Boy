@@ -11,6 +11,10 @@ let submitButt = document.querySelector(".submit-button");
 
 let displayCenter = document.querySelector(".display-center");
 
+let counter = 0;
+let countNegative = document.querySelector(".count-negative");
+countNegative.innerText = `${counter}/6`;
+
 //! ------------------------------ Word to Guess ----------------------------- */
 
 let wordSubmitted = [];
@@ -27,8 +31,6 @@ submitButt.addEventListener("click", () => {
     displayDiv.innerText = "   ";
     displayCenter.appendChild(displayDiv);
   }
-
-  
 });
 
 //! ----------------------------- Keyboard Mockup ---------------------------- */
@@ -48,14 +50,16 @@ for (let k = 0; k < 10; k++) {
   key.addEventListener("click", () => {
     event.preventDefault;
     let wordSplit = wordSubmitted[0].split("");
-    // console.log(wordSplit);
     for (let l = 0; l < wordSplit.length; l++) {
       if (key.innerText === wordSplit[l]) {
         document.getElementById(l).innerText = key.innerText;
       }
     }
+    if (wordSplit.includes(key.innerText) === false) {
+      counter++;
+      countNegative.innerText = `${counter}/6`;
+    }
   });
-  //! -------------------------------------------------------------------------- */
   qwerty.append(key);
 }
 
@@ -75,8 +79,11 @@ for (let l = 0; l < 9; l++) {
         document.getElementById(l).innerText = key.innerText;
       }
     }
+    if (wordSplit.includes(key.innerText) === false) {
+      counter++;
+      countNegative.innerText = `${counter}/6`;
+    }
   });
-  /* -------------------------------------------------------------------------- */
   asdfgh.append(key);
 }
 
@@ -96,8 +103,11 @@ for (let m = 0; m < 7; m++) {
         document.getElementById(l).innerText = key.innerText;
       }
     }
+    if (wordSplit.includes(key.innerText) === false) {
+      counter++;
+      countNegative.innerText = `${counter}/6`;
+    }
   });
-  /* -------------------------------------------------------------------------- */
   zxcvbn.append(key);
 }
 
@@ -116,8 +126,8 @@ for (let m = 0; m < 7; m++) {
 
 /* ------------------------------ Win Condition (Space Cowboy) -------------- */
 
-
-
 /* ----------------------------- Lose Condition ----------------------------- */
 
-
+let failure = () =>{
+  
+}
