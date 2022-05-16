@@ -9,6 +9,8 @@ let spacebar = document.querySelector(".spacebar");
 let submitInput = document.querySelector(".submit-input");
 let submitButt = document.querySelector(".submit-button");
 
+let displayCenter = document.querySelector(".display-center");
+
 //! ------------------------------ Word to Guess ----------------------------- */
 
 let wordSubmitted = [];
@@ -16,7 +18,15 @@ let wordSubmitted = [];
 submitButt.addEventListener("click", () => {
   wordSubmitted = [];
   wordSubmitted.push(submitInput.value);
-  console.log(wordSubmitted);
+  console.log(wordSubmitted[0].length);
+
+  for (let i = 0; i < wordSubmitted[0].length; i++) {
+    let displayDiv = document.createElement("div");
+    displayDiv.classList.add("display-div");
+    // displayDiv.innerText = wordSubmitted[0][i];
+    displayDiv.innerText = "   ";
+    displayCenter.appendChild(displayDiv);
+  }
 });
 
 //! ----------------------------- Keyboard Mockup ---------------------------- */
