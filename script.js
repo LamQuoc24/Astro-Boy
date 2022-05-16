@@ -1,16 +1,10 @@
 //! -------------------------------- Variables ------------------------------- */
 
-let input = document.querySelector("#input");
-let toGuess = document.querySelector("#word-button");
 let keyboard = document.querySelector("#keyboard");
 let qwerty = document.querySelector(".qwerty");
 let asdfgh = document.querySelector(".asdfgh");
 let zxcvbn = document.querySelector(".zxcvbn");
 let spacebar = document.querySelector(".spacebar");
-
-for (let i = 0; i < 27; i++) {
-  document.createElement("div");
-}
 
 //! ----------------------------- Keyboard Mockup ---------------------------- */
 
