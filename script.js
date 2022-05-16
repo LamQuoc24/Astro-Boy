@@ -19,7 +19,6 @@ submitButt.addEventListener("click", () => {
   wordSubmitted = [];
   let upperWord = submitInput.value;
   wordSubmitted.push(upperWord.toUpperCase());
-  // console.log(wordSubmitted);
 
   for (let i = 0; i < wordSubmitted[0].length; i++) {
     let displayDiv = document.createElement("div");
@@ -45,23 +44,14 @@ for (let k = 0; k < 10; k++) {
   key.innerText = qwertyKeys[k];
   //! ---------------------------- //!Clicky clicky ---------------------------- */
   key.addEventListener("click", () => {
+    event.preventDefault;
     let wordSplit = wordSubmitted[0].split("");
-    // document.getElementById("1").innerText = key.innerText
-    // console.log(key.innerText);
-    // console.log(wordSplit);
 
     for (let l = 0; l < wordSplit.length; l++) {
-      if ((key.innerText === wordSplit[l])) {
-        // document.getElementById(l).innerText = key.innerText;
+      if (key.innerText === wordSplit[l]) {
         document.getElementById(l).innerText = key.innerText;
       }
     }
-
-    // wordSplit.forEach((letter) => {
-    //   if (letter === key.innerText) {
-    //     console.log(5);
-    //   }
-    // });
   });
   //! -------------------------------------------------------------------------- */
   qwerty.append(key);
@@ -73,8 +63,18 @@ for (let l = 0; l < 9; l++) {
   key.classList.add("key");
   key.id = asdfghKeys[l];
   key.innerText = asdfghKeys[l];
-  // key.addEventListener('click', ()=>{
-  // })
+  /* -------------------------------------------------------------------------- */
+  key.addEventListener("click", () => {
+    event.preventDefault;
+    let wordSplit = wordSubmitted[0].split("");
+
+    for (let l = 0; l < wordSplit.length; l++) {
+      if (key.innerText === wordSplit[l]) {
+        document.getElementById(l).innerText = key.innerText;
+      }
+    }
+  });
+  /* -------------------------------------------------------------------------- */
   asdfgh.append(key);
 }
 
@@ -84,8 +84,18 @@ for (let m = 0; m < 7; m++) {
   key.classList.add("key");
   key.id = zxcvbnKeys[m];
   key.innerText = zxcvbnKeys[m];
-  // key.addEventListener('click', ()=>{
-  // })
+  /* -------------------------------------------------------------------------- */
+  key.addEventListener("click", () => {
+    event.preventDefault;
+    let wordSplit = wordSubmitted[0].split("");
+
+    for (let l = 0; l < wordSplit.length; l++) {
+      if (key.innerText === wordSplit[l]) {
+        document.getElementById(l).innerText = key.innerText;
+      }
+    }
+  });
+  /* -------------------------------------------------------------------------- */
   zxcvbn.append(key);
 }
 
