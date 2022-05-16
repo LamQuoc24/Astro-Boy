@@ -27,6 +27,8 @@ submitButt.addEventListener("click", () => {
     displayDiv.innerText = "   ";
     displayCenter.appendChild(displayDiv);
   }
+
+  
 });
 
 //! ----------------------------- Keyboard Mockup ---------------------------- */
@@ -46,7 +48,7 @@ for (let k = 0; k < 10; k++) {
   key.addEventListener("click", () => {
     event.preventDefault;
     let wordSplit = wordSubmitted[0].split("");
-
+    // console.log(wordSplit);
     for (let l = 0; l < wordSplit.length; l++) {
       if (key.innerText === wordSplit[l]) {
         document.getElementById(l).innerText = key.innerText;
@@ -100,14 +102,22 @@ for (let m = 0; m < 7; m++) {
 }
 
 //! ------------------------------- //!SPACEBAR ------------------------------ */
-for (let n = 0; n < 1; n++) {
-  let key = document.createElement("div");
-  key.classList.add("key");
-  key.id = spacebarKeys[n];
-  key.innerText = spacebarKeys[n];
-  // key.addEventListener('click', ()=>{
-  // })
-  spacebar.append(key);
-}
+// for (let n = 0; n < 1; n++) {
+//   let key = document.createElement("div");
+//   key.classList.add("key");
+//   key.id = spacebarKeys[n];
+//   key.innerText = spacebarKeys[n];
+//   // key.addEventListener('click', ()=>{
+//   // })
+//   spacebar.append(key);
+// }
 
-//! ------------------------- Cold Emptiness of Space ------------------------ */
+//! ------------------------- Cold Emptiness of Space ----------------------- */
+
+/* ------------------------------ Win Condition (Space Cowboy) -------------- */
+
+
+
+/* ----------------------------- Lose Condition ----------------------------- */
+
+
