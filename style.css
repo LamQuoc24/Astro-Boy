@@ -49,8 +49,14 @@ nav p{
 
 .right-display {
     display: flex;
+    flex-direction: column;
     margin: auto;
     align-items: center;
+}
+
+.right-display p {
+    font-family: 'Audiowide', cursive;
+    font-size: 25px;
 }
 
 .display-center {
@@ -122,6 +128,7 @@ input{
 
 .key {
     border: 1.5px solid rgba(255, 255, 255, 0.5);
+    margin: 10px;
 }
 
 .qwerty {
