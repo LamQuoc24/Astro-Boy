@@ -99,7 +99,7 @@ for (let m = 0; m < 7; m++) {
   zxcvbn.append(key);
 }
 
-//!SPACEBAR
+//! ------------------------------- //!SPACEBAR ------------------------------ */
 for (let n = 0; n < 1; n++) {
   let key = document.createElement("div");
   key.classList.add("key");
