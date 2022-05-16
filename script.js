@@ -18,8 +18,7 @@ let wordSubmitted = [];
 submitButt.addEventListener("click", () => {
   wordSubmitted = [];
   wordSubmitted.push(submitInput.value);
-  let wordSplit = wordSubmitted[0].split("");
-  console.log(wordSplit);
+  // let wordSplit = wordSubmitted[0].split("");
 
   for (let i = 0; i < wordSubmitted[0].length; i++) {
     let displayDiv = document.createElement("div");
@@ -44,11 +43,11 @@ for (let k = 0; k < 10; k++) {
   key.innerText = qwertyKeys[k];
   //! ---------------------------- //!Clicky clicky ---------------------------- */
   key.addEventListener("click", () => {
-    console.log(wordSubmitted[0]);
-    console.log(key.innerText);
-    //     wordSubmitted[0].forEach(letter =>{
-    // console.log(letter);
-    //     })
+    console.log(wordSubmitted);
+    let wordSplit = wordSubmitted[0].split("");
+    wordSplit.forEach((element) => {
+      console.log(element);
+    });
   });
   //! -------------------------------------------------------------------------- */
   qwerty.append(key);
