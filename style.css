@@ -5,10 +5,30 @@
 }
 body {
     height: 100%;
+    width: 100%;
+    overflow: hidden;
     display: flex;
     flex-wrap: wrap;
-    background: #164C45;
+    background: radial-gradient(50% 50% at 50% 50%, #3C3252 0%, #0E0326 100%);
+    /* background: linear-gradient(0deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0) 100%); */
+
 }
+
+/* body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 24px 24px 80px;
+    gap: 32px;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0) 100%);
+} */
+
 
 .sidebar{
     display: flex;
@@ -109,7 +129,7 @@ main {
 }
 
 .spacebar .key {
-    width: 40%;
+    /* width: 40%; */
 }
 
 .zxcvbn {
