@@ -24,6 +24,7 @@ submitButt.addEventListener("click", () => {
   for (let i = 0; i < wordSubmitted[0].length; i++) {
     let displayDiv = document.createElement("div");
     displayDiv.classList.add("display-div");
+    displayDiv.id = i;
     displayDiv.innerText = "   ";
     displayCenter.appendChild(displayDiv);
   }
@@ -45,14 +46,22 @@ for (let k = 0; k < 10; k++) {
   //! ---------------------------- //!Clicky clicky ---------------------------- */
   key.addEventListener("click", () => {
     let wordSplit = wordSubmitted[0].split("");
-    console.log(wordSplit);
-    wordSplit.forEach((letter) => {
-      // console.log(letter);
-      // console.log(key.innerText);
-      if (letter === key.innerText){
-        console.log(5);
+    // document.getElementById("1").innerText = key.innerText
+    // console.log(key.innerText);
+    // console.log(wordSplit);
+
+    for (let l = 0; l < wordSplit.length; l++) {
+      if ((key.innerText === wordSplit[l])) {
+        // document.getElementById(l).innerText = key.innerText;
+        document.getElementById(l).innerText = key.innerText;
       }
-    });
+    }
+
+    // wordSplit.forEach((letter) => {
+    //   if (letter === key.innerText) {
+    //     console.log(5);
+    //   }
+    // });
   });
   //! -------------------------------------------------------------------------- */
   qwerty.append(key);
