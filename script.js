@@ -6,6 +6,19 @@ let asdfgh = document.querySelector(".asdfgh");
 let zxcvbn = document.querySelector(".zxcvbn");
 let spacebar = document.querySelector(".spacebar");
 
+let submitInput = document.querySelector(".submit-input");
+let submitButt = document.querySelector(".submit-button");
+
+//! ------------------------------ Word to Guess ----------------------------- */
+
+let wordSubmitted = [];
+
+submitButt.addEventListener("click", () => {
+  wordSubmitted = [];
+  wordSubmitted.push(submitInput.value);
+  console.log(wordSubmitted);
+});
+
 //! ----------------------------- Keyboard Mockup ---------------------------- */
 
 let qwertyKeys = ["Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P"];
