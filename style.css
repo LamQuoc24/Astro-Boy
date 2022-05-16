@@ -115,17 +115,19 @@ flex-direction: column;
 
 .rocket {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    height: 84%;
+    flex-direction: column-reverse;
+
+    /* justify-content: center; */
     /* border: 1.5px solid rgba(255, 255, 255, 0.5); */
 
     /* align-items: flex-end; */
     /* border: 1.5px solid rgba(255, 255, 255, 0.5); */
 }
 
-/* .img {
-    z-index: -1;
-} */
+.rocket img {
+bottom: 0;
+}
 
 button {
 background: white;

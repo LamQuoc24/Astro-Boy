@@ -58,6 +58,9 @@ for (let k = 0; k < 10; k++) {
     if (wordSplit.includes(key.innerText) === false) {
       counter++;
       countNegative.innerText = `${counter}/6`;
+      if (counter > 5) {
+        failure();
+      }
     }
   });
   qwerty.append(key);
@@ -82,6 +85,9 @@ for (let l = 0; l < 9; l++) {
     if (wordSplit.includes(key.innerText) === false) {
       counter++;
       countNegative.innerText = `${counter}/6`;
+      if (counter > 5) {
+        failure();
+      }
     }
   });
   asdfgh.append(key);
@@ -106,6 +112,9 @@ for (let m = 0; m < 7; m++) {
     if (wordSplit.includes(key.innerText) === false) {
       counter++;
       countNegative.innerText = `${counter}/6`;
+      if (counter > 5) {
+        failure();
+      }
     }
   });
   zxcvbn.append(key);
@@ -128,6 +137,7 @@ for (let m = 0; m < 7; m++) {
 
 /* ----------------------------- Lose Condition ----------------------------- */
 
-let failure = () =>{
-  
-}
+let failure = () => {
+  alert("You lose, bitch");
+  counter = 0;
+};
