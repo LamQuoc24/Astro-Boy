@@ -129,6 +129,7 @@ input{
 }
 
 .key {
+
     border: 1.5px solid rgba(255, 255, 255, 0.5);
     margin: 10px;
 }
