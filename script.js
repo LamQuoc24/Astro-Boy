@@ -15,6 +15,9 @@ let counter = 0;
 let countNegative = document.querySelector(".count-negative");
 countNegative.innerText = `${counter}/6`;
 
+let restart = document.querySelector(".restart");
+let cowboy = document.querySelector(".cowboy");
+
 //! ------------------------------ Word to Guess ----------------------------- */
 
 let wordSubmitted = [];
@@ -32,6 +35,8 @@ submitButt.addEventListener("click", () => {
     displayDiv.innerText = "   ";
     displayCenter.appendChild(displayDiv);
   }
+
+  submitButt.disabled = true;
 });
 
 //! ----------------------------- Keyboard Mockup ---------------------------- */
@@ -47,10 +52,12 @@ for (let k = 0; k < 10; k++) {
   key.classList.add("key");
   key.id = qwertyKeys[k];
   key.innerText = qwertyKeys[k];
-  //! ---------------------------- //!Clicky clicky ---------------------------- */
+
   key.addEventListener("click", () => {
     event.preventDefault;
     let wordSplit = wordSubmitted[0].split("");
+    key.style.backgroundColor = "rgba(255, 255, 255, 0.5)";
+
     for (let l = 0; l < wordSplit.length; l++) {
       if (key.innerText === wordSplit[l]) {
         document.getElementById(l).innerText = key.innerText;
@@ -58,15 +65,13 @@ for (let k = 0; k < 10; k++) {
     }
     //! ------------------------------ Win Condition ----------------------------- */
 
-    // let arr = [];
-    // for (let w = 0; w < wordSplit.length; w++) {
-    //   arr.push(document.getElementById(w).innerText);
-    //   if (arr === wordSplit) {
-    //     alert("win");
-    //   }
-    //   console.log(arr);
-    //   console.log(wordSplit);
-    // }
+    let arr = [];
+    for (let w = 0; w < wordSplit.length; w++) {
+      arr.push(document.getElementById(w).innerText);
+      if (JSON.stringify(arr) === JSON.stringify(wordSplit)) {
+        win();
+      }
+    }
 
     //! ----------------------------- Lose Condition ----------------------------- */
     if (wordSplit.includes(key.innerText) === false) {
@@ -86,16 +91,26 @@ for (let l = 0; l < 9; l++) {
   key.classList.add("key");
   key.id = asdfghKeys[l];
   key.innerText = asdfghKeys[l];
-  /* -------------------------------------------------------------------------- */
+
   key.addEventListener("click", () => {
     event.preventDefault;
     let wordSplit = wordSubmitted[0].split("");
+    key.style.backgroundColor = "rgba(255, 255, 255, 0.5)";
 
     for (let l = 0; l < wordSplit.length; l++) {
       if (key.innerText === wordSplit[l]) {
         document.getElementById(l).innerText = key.innerText;
       }
     }
+
+    let arr = [];
+    for (let w = 0; w < wordSplit.length; w++) {
+      arr.push(document.getElementById(w).innerText);
+      if (JSON.stringify(arr) === JSON.stringify(wordSplit)) {
+        win();
+      }
+    }
+
     if (wordSplit.includes(key.innerText) === false) {
       counter++;
       countNegative.innerText = `${counter}/6`;
@@ -113,16 +128,26 @@ for (let m = 0; m < 7; m++) {
   key.classList.add("key");
   key.id = zxcvbnKeys[m];
   key.innerText = zxcvbnKeys[m];
-  /* -------------------------------------------------------------------------- */
+
   key.addEventListener("click", () => {
     event.preventDefault;
     let wordSplit = wordSubmitted[0].split("");
+    key.style.backgroundColor = "rgba(255, 255, 255, 0.5)";
 
     for (let l = 0; l < wordSplit.length; l++) {
       if (key.innerText === wordSplit[l]) {
         document.getElementById(l).innerText = key.innerText;
       }
     }
+
+    let arr = [];
+    for (let w = 0; w < wordSplit.length; w++) {
+      arr.push(document.getElementById(w).innerText);
+      if (JSON.stringify(arr) === JSON.stringify(wordSplit)) {
+        win();
+      }
+    }
+
     if (wordSplit.includes(key.innerText) === false) {
       counter++;
       countNegative.innerText = `${counter}/6`;
@@ -147,7 +172,6 @@ for (let m = 0; m < 7; m++) {
 
 //! ------------------------- Cold Emptiness of Space ----------------------- */
 
-
 /* ----------------------------- Lose Condition ----------------------------- */
 
 let failure = () => {
@@ -155,7 +179,11 @@ let failure = () => {
   counter = 0;
 };
 /* ------------------------------ Win Condition (Space Cowboy) -------------- */
- let win = () => {
+let win = () => {
   let rocket = document.querySelector(".rocket");
-  rocket.style.backgroundImage = "URL('/imgs/rocket-win.gif')"
- }
+  rocket.style.backgroundImage = "URL('/imgs/rocket-win.gif')";
+  restart.style.display = "block";
+  cowboy.style.display = "block";
+};
+
+

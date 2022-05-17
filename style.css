@@ -128,9 +128,10 @@ flex-direction: column;
 .rocket {
     display: flex;
     height: 82%;
+    /* justify-content: center; */
     flex-direction: column-reverse;
-    background: url(/imgs/rocket-win.gif);
-    /* background: url(/imgs/State=1\ Error.png); */
+    /* background: url(/imgs/rocket-win.gif); */
+    background: url(/imgs/State=1\ Error.png);
     background-position: center;
     background-size: cover;
 }
@@ -205,3 +206,40 @@ background: lemonchiffon;
 .spacebar {
     display: flex;
 } */
+
+
+.cowboy {
+    position: absolute;
+    display: none;
+    width: 26vw;
+    right: 0;
+    top: 270px;
+    text-align: center;
+    font-family: 'Audiowide', cursive;
+    font-size: 34px;
+
+}
+
+
+.restart {
+    position: absolute;
+    display: none;
+    font-family: 'Audiowide', cursive;
+    font-size: 30px;
+    /* margin: auto; */
+    /* justify-content: center; */
+    z-index: 2;
+    bottom: 50px;
+    /* left: 0px; */
+    right: 150px;
+    height: 100px;
+    width: 200px;
+    background: rgba(14, 3, 38, 0.75);
+    border: 3px solid rgba(255, 255, 255, .75);
+}
+
+.restart:hover {
+    background: lemonchiffon;
+    color: black;
+    }
+
