@@ -47,6 +47,15 @@ nav p{
     height: 100%;
 }
 
+.form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+
+}
+
 .right-display {
     display: flex;
     flex-direction: column;
@@ -226,6 +235,7 @@ background: lemonchiffon;
     display: none;
     font-family: 'Audiowide', cursive;
     font-size: 30px;
+    text-align: center;
     /* margin: auto; */
     /* justify-content: center; */
     z-index: 2;

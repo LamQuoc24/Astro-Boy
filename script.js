@@ -184,6 +184,15 @@ let win = () => {
   rocket.style.backgroundImage = "URL('/imgs/rocket-win.gif')";
   restart.style.display = "block";
   cowboy.style.display = "block";
+  restart.addEventListener("click", () => {
+    counter = 0;
+    countNegative.innerText = `${counter}/6`;
+    rocket.style.backgroundImage = "URL('/imgs/State=1 Error.png')";
+    restart.style.display = "none";
+    cowboy.style.display = "none";
+    submitInput.value = "";
+    submitButt.disabled = false;
+    // key.style.backgroundColor = "";
+    //while Ask Brian
+  });
 };
-
-
