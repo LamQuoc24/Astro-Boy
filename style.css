@@ -57,6 +57,8 @@ nav p{
 .right-display p {
     font-family: 'Audiowide', cursive;
     font-size: 25px;
+    width: 90%;
+    /* text-align: center; */
 }
 
 .display-center {
@@ -90,7 +92,7 @@ nav p{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 16%;
+    height: 18%;
     gap: 24px;
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.125) 0%, rgba(255, 255, 255, 0.25) 100%);
     /* background: black; */
@@ -105,6 +107,7 @@ flex-direction: column;
 
 .time-left p{
     color: #69FA24;
+    font-size: 20px;
     font-family: 'Gugi', cursive;
 
 }
@@ -117,24 +120,19 @@ flex-direction: column;
 
 .errors p{
     color: #69FA24;
+    font-size: 20px;
     font-family: 'Gugi', cursive;
 
 }
 
 .rocket {
     display: flex;
-    height: 84%;
+    height: 82%;
     flex-direction: column-reverse;
-    /* background: url(/imgs/rocket-win.gif); */
-    background: url(/imgs/State=1\ Error.png);
+    background: url(/imgs/rocket-win.gif);
+    /* background: url(/imgs/State=1\ Error.png); */
     background-position: center;
     background-size: cover;
-
-    /* justify-content: center; */
-    /* border: 1.5px solid rgba(255, 255, 255, 0.5); */
-
-    /* align-items: flex-end; */
-    /* border: 1.5px solid rgba(255, 255, 255, 0.5); */
 }
 
 .rocket img {
@@ -166,7 +164,7 @@ input{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
 
 .key {
@@ -175,8 +173,8 @@ input{
     align-items: center;
     border: 2px solid rgba(255, 255, 255, 0.5);
     margin: 5px;
-    height: 70px;
-    width: 70px;
+    height: 50px;
+    width: 50px;
     font-family: 'Audiowide', cursive;
     font-weight: bold;
     font-size: 27px;
@@ -188,14 +186,20 @@ background: lemonchiffon;
 
 .qwerty {
     display: flex;
+    width: 100%;
+    justify-content: center;
 }
 
 .asdfgh {
     display: flex;
+    width: 100%;
+    justify-content: center;
 }
 
 .zxcvbn {
-    display: flex
+    display: flex;
+    width: 100%;
+    justify-content: center;
 }
 /* 
 .spacebar {

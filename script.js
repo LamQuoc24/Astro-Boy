@@ -20,6 +20,7 @@ countNegative.innerText = `${counter}/6`;
 let wordSubmitted = [];
 
 submitButt.addEventListener("click", () => {
+  event.preventDefault;
   wordSubmitted = [];
   let upperWord = submitInput.value;
   wordSubmitted.push(upperWord.toUpperCase());
@@ -57,15 +58,15 @@ for (let k = 0; k < 10; k++) {
     }
     //! ------------------------------ Win Condition ----------------------------- */
 
-    let arr = [];
-    for (let w = 0; w < wordSplit.length; w++) {
-      arr.push(document.getElementById(w).innerText);
-      if (arr === wordSplit) {
-        alert("win");
-      }
-      console.log(arr);
-      console.log(wordSplit);
-    }
+    // let arr = [];
+    // for (let w = 0; w < wordSplit.length; w++) {
+    //   arr.push(document.getElementById(w).innerText);
+    //   if (arr === wordSplit) {
+    //     alert("win");
+    //   }
+    //   console.log(arr);
+    //   console.log(wordSplit);
+    // }
 
     //! ----------------------------- Lose Condition ----------------------------- */
     if (wordSplit.includes(key.innerText) === false) {
@@ -146,7 +147,6 @@ for (let m = 0; m < 7; m++) {
 
 //! ------------------------- Cold Emptiness of Space ----------------------- */
 
-/* ------------------------------ Win Condition (Space Cowboy) -------------- */
 
 /* ----------------------------- Lose Condition ----------------------------- */
 
@@ -154,3 +154,8 @@ let failure = () => {
   alert("You lose, bitch");
   counter = 0;
 };
+/* ------------------------------ Win Condition (Space Cowboy) -------------- */
+ let win = () => {
+  let rocket = document.querySelector(".rocket");
+  rocket.style.backgroundImage = "URL('/imgs/rocket-win.gif')"
+ }
