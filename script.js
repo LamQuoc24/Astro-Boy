@@ -159,17 +159,6 @@ for (let m = 0; m < 7; m++) {
   zxcvbn.append(key);
 }
 
-//! ------------------------------- //!SPACEBAR ------------------------------ */
-// for (let n = 0; n < 1; n++) {
-//   let key = document.createElement("div");
-//   key.classList.add("key");
-//   key.id = spacebarKeys[n];
-//   key.innerText = spacebarKeys[n];
-//   // key.addEventListener('click', ()=>{
-//   // })
-//   spacebar.append(key);
-// }
-
 //! ------------------------- Cold Emptiness of Space ----------------------- */
 
 /* ----------------------------- Lose Condition ----------------------------- */
@@ -184,6 +173,7 @@ let win = () => {
   rocket.style.backgroundImage = "URL('/imgs/rocket-win.gif')";
   restart.style.display = "block";
   cowboy.style.display = "block";
+  
   restart.addEventListener("click", () => {
     counter = 0;
     countNegative.innerText = `${counter}/6`;
@@ -192,10 +182,15 @@ let win = () => {
     cowboy.style.display = "none";
     submitInput.value = "";
     submitButt.disabled = false;
-    // key.style.backgroundColor = "";
-    // console.log(wordSubmitted);
+
     while (displayCenter.firstChild) {
-      displayCenter.removeChild(displayCenter.firstChild);
+      displayCenter.removeChild(displayCenter.firstChild);      
+    }
+
+    let keys = document.querySelectorAll(".key");
+    for (let v = 0; v < keys.length; v++){
+      keys[v].style.backgroundColor = ""
     }
   });
 };
+
