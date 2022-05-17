@@ -55,6 +55,19 @@ for (let k = 0; k < 10; k++) {
         document.getElementById(l).innerText = key.innerText;
       }
     }
+    //! ------------------------------ Win Condition ----------------------------- */
+
+    let arr = [];
+    for (let w = 0; w < wordSplit.length; w++) {
+      arr.push(document.getElementById(w).innerText);
+      if (arr === wordSplit) {
+        alert("win");
+      }
+      console.log(arr);
+      console.log(wordSplit);
+    }
+
+    //! ----------------------------- Lose Condition ----------------------------- */
     if (wordSplit.includes(key.innerText) === false) {
       counter++;
       countNegative.innerText = `${counter}/6`;
