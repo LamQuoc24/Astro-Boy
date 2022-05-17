@@ -193,6 +193,9 @@ let win = () => {
     submitInput.value = "";
     submitButt.disabled = false;
     // key.style.backgroundColor = "";
-    //while Ask Brian
+    // console.log(wordSubmitted);
+    while (displayCenter.firstChild) {
+      displayCenter.removeChild(displayCenter.firstChild);
+    }
   });
 };

@@ -45,6 +45,7 @@ nav p{
     border-right: 1px solid rgba(255, 255, 255, 0.5);
     width: 34%;
     height: 100%;
+    font-family: 'Audiowide', cursive;
 }
 
 .form{
@@ -53,7 +54,20 @@ nav p{
     justify-content: space-between;
     height: 50%;
     border: 1px solid rgba(255, 255, 255, 0.5);
+}
 
+.submit-button {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    font-family: 'Audiowide', cursive;
+    line-height: 125%;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    background: rgba(255, 255, 255, 0.25);
+    border: 1.5px solid rgba(255, 255, 255, 0.5);
+
+color: #FFFFFF;
 }
 
 .right-display {
