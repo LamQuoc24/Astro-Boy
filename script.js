@@ -66,7 +66,7 @@ submitButt.addEventListener("click", function clickyclick() {
 
   moButt.addEventListener("click", closeModal);
 
- //! ---------------------------------- Countdown ------------------------------ */
+  //! ---------------------------------- Countdown ------------------------------ */
   let startingMinutes = 3;
   let time = startingMinutes * 60 + 46;
   let countD = document.querySelector(".countD");
@@ -78,6 +78,12 @@ submitButt.addEventListener("click", function clickyclick() {
     seconds = seconds < 10 ? "0" + seconds : seconds;
     countD.innerHTML = `${minutes}: ${seconds}`;
     time--;
+    if (time === 166) {
+      alert("Careful, you're running out of time 😈");
+    }
+    if (time === 114) {
+      alert("You're halfway there 😈");
+    }
     if (time < 0) {
       failure();
       clearInterval(interval);
