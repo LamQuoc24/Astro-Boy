@@ -24,10 +24,14 @@ let cowboy = document.querySelector(".cowboy");
 //Todo: Audio
 let audio = new Audio("./audio/the_color_violet.mp3");
 
-//Todo: Modal
+//Todo: Instructions-Modal
 let modalGrey = document.querySelector(".modal-grey");
 let modal = document.querySelector(".modal");
 let moButt = document.querySelector(".mo-butt");
+
+//Todo: Failure Modal
+let modalFail = document.querySelector(".failure-grey");
+let failButt = document.querySelector(".fail-button");
 
 //! ------------------------------ Word to Guess ----------------------------- */
 
@@ -54,11 +58,11 @@ submitButt.addEventListener("click", () => {
     modalGrey.style.display = "flex";
   };
 
+  openModal();
+
   const closeModal = () => {
     modalGrey.style.display = "none";
   };
-
-  openModal();
 
   moButt.addEventListener("click", closeModal);
 });
@@ -187,6 +191,17 @@ let failure = () => {
   // alert("You lose, bitch");
   counter = 0;
 
+  const openFail = () => {
+    modalFail.style.display = "flex";
+  };
+
+  openFail();
+
+  const closeModal = () => {
+    modalFail.style.display = "none";
+  };
+
+  failButt.addEventListener("click", closeModal);
   restart.style.display = "block";
   restart.addEventListener("click", () => {
     counter = 0;
@@ -207,6 +222,8 @@ let failure = () => {
 
     audio.pause();
     audio.currentTime = 0;
+
+
   });
 };
 //! ------------------------------ Win Condition (Space Cowboy) -------------- */
