@@ -29,6 +29,14 @@ let modalGrey = document.querySelector(".modal-grey");
 let modal = document.querySelector(".modal");
 let moButt = document.querySelector(".mo-butt");
 
+// const openModal = () => {
+//   modalGrey.style.display = "flex";
+// };
+
+// const closeModal = () => {
+//   modalGrey.style.display = "none";
+// };
+
 //! ------------------------------ Word to Guess ----------------------------- */
 
 let wordSubmitted = [];
@@ -49,6 +57,18 @@ submitButt.addEventListener("click", () => {
 
   submitButt.disabled = true;
   audio.play();
+
+  const openModal = () => {
+    modalGrey.style.display = "flex";
+  };
+
+  const closeModal = () => {
+    modalGrey.style.display = "none";
+  };
+
+  openModal();
+
+  moButt.addEventListener("click", closeModal);
 });
 
 //! ----------------------------- Keyboard Mockup ---------------------------- */
@@ -230,4 +250,3 @@ let win = () => {
 //       display = document.querySelector('#time');
 //   startTimer(fiveMinutes, display);
 // };
-

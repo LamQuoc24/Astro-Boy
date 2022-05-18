@@ -281,7 +281,7 @@ background: lemonchiffon;
 /* ------------------------------- Modal Shit ------------------------------- */
 
 .modal-grey{
-    /* display: none; */
+    display: none;
     z-index: 2;
     background-color: rgba(0,0,0,0.4);
     overflow: auto;
@@ -297,7 +297,7 @@ background: lemonchiffon;
     height: 550px;
     width: 570px;
     margin: auto;
-    top: 200px;
+    top: 0px;
     background: white;
     color: black;
 }
