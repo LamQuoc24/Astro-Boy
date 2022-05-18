@@ -322,14 +322,24 @@ background: lemonchiffon;
     display: flex;
     flex-direction: column;
     height: 85%;
+    padding: 30px 15px;
+    /* color: black; */
+}
 
+.instructions p{
+    font-size: 25px;
+    color: black;
+    font-family: 'Gugi', cursive;
+}
+
+strong{
+    color: black;
+    text-decoration: underline;
 }
 
 .mo-butt{
 color: black;
 font-size: 24px;
 font-family: 'audiowide', cursive;
-
-
 }
 
