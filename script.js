@@ -18,6 +18,7 @@ countNegative.innerText = `${counter}/6`;
 let restart = document.querySelector(".restart");
 let cowboy = document.querySelector(".cowboy");
 
+let audio = new Audio("./audio/the_color_violet.mp3");
 //! ------------------------------ Word to Guess ----------------------------- */
 
 let wordSubmitted = [];
@@ -37,6 +38,7 @@ submitButt.addEventListener("click", () => {
   }
 
   submitButt.disabled = true;
+  audio.play();
 });
 
 //! ----------------------------- Keyboard Mockup ---------------------------- */
@@ -63,7 +65,6 @@ for (let k = 0; k < 10; k++) {
         document.getElementById(l).innerText = key.innerText;
       }
     }
-    //! ------------------------------ Win Condition ----------------------------- */
 
     let arr = [];
     for (let w = 0; w < wordSplit.length; w++) {
@@ -73,7 +74,6 @@ for (let k = 0; k < 10; k++) {
       }
     }
 
-    //! ----------------------------- Lose Condition ----------------------------- */
     if (wordSplit.includes(key.innerText) === false) {
       counter++;
       countNegative.innerText = `${counter}/6`;
@@ -159,21 +159,19 @@ for (let m = 0; m < 7; m++) {
   zxcvbn.append(key);
 }
 
-//! ------------------------- Cold Emptiness of Space ----------------------- */
-
-/* ----------------------------- Lose Condition ----------------------------- */
+//! ----------------------------- Lose Condition ----------------------------- */
 
 let failure = () => {
   alert("You lose, bitch");
   counter = 0;
 };
-/* ------------------------------ Win Condition (Space Cowboy) -------------- */
+//! ------------------------------ Win Condition (Space Cowboy) -------------- */
 let win = () => {
   let rocket = document.querySelector(".rocket");
   rocket.style.backgroundImage = "URL('/imgs/rocket-win.gif')";
   restart.style.display = "block";
   cowboy.style.display = "block";
-  
+
   restart.addEventListener("click", () => {
     counter = 0;
     countNegative.innerText = `${counter}/6`;
@@ -184,13 +182,42 @@ let win = () => {
     submitButt.disabled = false;
 
     while (displayCenter.firstChild) {
-      displayCenter.removeChild(displayCenter.firstChild);      
+      displayCenter.removeChild(displayCenter.firstChild);
     }
 
     let keys = document.querySelectorAll(".key");
-    for (let v = 0; v < keys.length; v++){
-      keys[v].style.backgroundColor = ""
+    for (let v = 0; v < keys.length; v++) {
+      keys[v].style.backgroundColor = "";
     }
+
+    audio.pause();
+    audio.currentTime = 0;
   });
 };
 
+//! ---------------------------------- Countdown ------------------------------ */
+
+// let startTimer = (duration, display) => {
+//   let timer = duration, minutes, seconds;
+//   setInterval(function () {
+//       minutes = parseInt(timer / 60, 10)
+//       seconds = parseInt(timer % 60, 10);
+
+//       minutes = minutes < 10 ? "0" + minutes : minutes;
+//       seconds = seconds < 10 ? "0" + seconds : seconds;
+
+//       display.textContent = minutes + ":" + seconds;
+
+//       if (--timer < 0) {
+//           timer = duration;
+//       }
+//   }, 1000);
+// }
+
+// window.onload = function () {
+//   let fiveMinutes = 60 * 5,
+//       display = document.querySelector('#time');
+//   startTimer(fiveMinutes, display);
+// };
+
+//! ------------------------- Cold Emptiness of Space ----------------------- */
