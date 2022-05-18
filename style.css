@@ -362,6 +362,7 @@ strong{
 
 .failure-modal {
     font-family: 'audiowide', cursive;
+    /* display: none; */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -373,5 +374,18 @@ strong{
     height: 260px;
     width: 470px;
     margin: auto;
-    /* top: 300px; */
+    font-size: 20px;
+}
+
+.fail-button {
+    font-family: 'audiowide', cursive;
+    background: transparent;
+    border: none;
+    font-size: 50px;
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    right: 0;
+    top: 0;
+    /* translate: -100px; */
 }
