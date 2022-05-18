@@ -29,14 +29,6 @@ let modalGrey = document.querySelector(".modal-grey");
 let modal = document.querySelector(".modal");
 let moButt = document.querySelector(".mo-butt");
 
-// const openModal = () => {
-//   modalGrey.style.display = "flex";
-// };
-
-// const closeModal = () => {
-//   modalGrey.style.display = "none";
-// };
-
 //! ------------------------------ Word to Guess ----------------------------- */
 
 let wordSubmitted = [];
@@ -192,8 +184,30 @@ for (let m = 0; m < 7; m++) {
 //! ----------------------------- Cold Emptiness of Space----------------------- */
 
 let failure = () => {
-  alert("You lose, bitch");
+  // alert("You lose, bitch");
   counter = 0;
+
+  restart.style.display = "block";
+  restart.addEventListener("click", () => {
+    counter = 0;
+    countNegative.innerText = `${counter}/6`;
+    restart.style.display = "none";
+    cowboy.style.display = "none";
+    submitInput.value = "";
+    submitButt.disabled = false;
+
+    while (displayCenter.firstChild) {
+      displayCenter.removeChild(displayCenter.firstChild);
+    }
+
+    let keys = document.querySelectorAll(".key");
+    for (let v = 0; v < keys.length; v++) {
+      keys[v].style.backgroundColor = "";
+    }
+
+    audio.pause();
+    audio.currentTime = 0;
+  });
 };
 //! ------------------------------ Win Condition (Space Cowboy) -------------- */
 let win = () => {
