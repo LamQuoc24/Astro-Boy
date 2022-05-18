@@ -33,11 +33,11 @@ let moButt = document.querySelector(".mo-butt");
 let modalFail = document.querySelector(".failure-grey");
 let failButt = document.querySelector(".fail-button");
 
-//! ------------------------------ Word to Guess ----------------------------- */
+//! ------------------------------ Clicky Clicky ----------------------------- */
 
 let wordSubmitted = [];
 
-submitButt.addEventListener("click", () => {
+submitButt.addEventListener("click", function clickyclick() {
   event.preventDefault;
   wordSubmitted = [];
   let upperWord = submitInput.value;
@@ -65,6 +65,24 @@ submitButt.addEventListener("click", () => {
   };
 
   moButt.addEventListener("click", closeModal);
+
+ //! ---------------------------------- Countdown ------------------------------ */
+  let startingMinutes = 3;
+  let time = startingMinutes * 60 + 46;
+  let countD = document.querySelector(".countD");
+  let interval = setInterval(updateCountdown, 1000);
+
+  function updateCountdown() {
+    const minutes = Math.floor(time / 60);
+    let seconds = time % 60;
+    seconds = seconds < 10 ? "0" + seconds : seconds;
+    countD.innerHTML = `${minutes}: ${seconds}`;
+    time--;
+    if (time < 0) {
+      failure();
+      clearInterval(interval);
+    }
+  }
 });
 
 //! ----------------------------- Keyboard Mockup ---------------------------- */
@@ -254,22 +272,3 @@ let win = () => {
     audio.currentTime = 0;
   });
 };
-
-//! ---------------------------------- Countdown ------------------------------ */
-
-const startingMinutes = 3;
-let time = (startingMinutes * 60)+46;
-let countD = document.querySelector(".countD");
-let interval = setInterval(updateCountdown, 1000);
-
-function updateCountdown() {
-  const minutes = Math.floor(time / 60);
-  let seconds = time % 60;
-  seconds = seconds < 10? "0" + seconds : seconds;
-  countD.innerHTML = `${minutes}: ${seconds}`;
-  time--;
-  if (time < 0) {
-    alert("Game Over");
-    clearInterval(interval);
-  }
-}
