@@ -4,10 +4,6 @@
     box-sizing: border-box;
     color: white;
 }
-/* 
-font-family: 'Audiowide', cursive;
-font-family: 'Gugi', cursive;
-font-family: 'Noto Sans', sans-serif; */
 
 body {
     display: flex;
@@ -281,4 +277,59 @@ background: lemonchiffon;
     background: lemonchiffon;
     color: black;
     }
+
+/* ------------------------------- Modal Shit ------------------------------- */
+
+.modal-grey{
+    /* display: none; */
+    z-index: 2;
+    background-color: rgba(0,0,0,0.4);
+    overflow: auto;
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+}
+
+.modal {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 550px;
+    width: 570px;
+    margin: auto;
+    top: 200px;
+    background: white;
+    color: black;
+}
+
+
+.how-to-play{
+    display: flex;
+    border-bottom: black 2px solid;
+    height: 15%;
+    align-items: center;
+    padding: 0 24px;
+    font-size: 24px;
+    justify-content: space-between;
+    font-family: 'audiowide', cursive;
+}
+
+.how-to-play p{
+    color: black;
+}
+
+.instructions {
+    display: flex;
+    flex-direction: column;
+    height: 85%;
+
+}
+
+.mo-butt{
+color: black;
+font-size: 24px;
+font-family: 'audiowide', cursive;
+
+
+}
 

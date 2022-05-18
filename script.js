@@ -1,24 +1,34 @@
 //! -------------------------------- Variables ------------------------------- */
 
+//Todo: Keyboard
 let keyboard = document.querySelector("#keyboard");
 let qwerty = document.querySelector(".qwerty");
 let asdfgh = document.querySelector(".asdfgh");
 let zxcvbn = document.querySelector(".zxcvbn");
 let spacebar = document.querySelector(".spacebar");
 
+//Todo: Display
 let submitInput = document.querySelector(".submit-input");
 let submitButt = document.querySelector(".submit-button");
-
 let displayCenter = document.querySelector(".display-center");
 
+//Todo: Countdown
 let counter = 0;
 let countNegative = document.querySelector(".count-negative");
 countNegative.innerText = `${counter}/6`;
 
+//Todo: Cowboy
 let restart = document.querySelector(".restart");
 let cowboy = document.querySelector(".cowboy");
 
+//Todo: Audio
 let audio = new Audio("./audio/the_color_violet.mp3");
+
+//Todo: Modal
+let modalGrey = document.querySelector(".modal-grey");
+let modal = document.querySelector(".modal");
+let moButt = document.querySelector(".mo-butt");
+
 //! ------------------------------ Word to Guess ----------------------------- */
 
 let wordSubmitted = [];
@@ -48,7 +58,7 @@ let asdfghKeys = ["A", "S", "D", "F", "G", "H", "J", "K", "L"];
 let zxcvbnKeys = ["Z", "X", "C", "V", "B", "N", "M"];
 let spacebarKeys = ["_"];
 
-//!QWERTYUIOP
+//Todo: QWERTYUIOP
 for (let k = 0; k < 10; k++) {
   let key = document.createElement("div");
   key.classList.add("key");
@@ -85,7 +95,7 @@ for (let k = 0; k < 10; k++) {
   qwerty.append(key);
 }
 
-//!ASDFGHJKL
+//Todo: ASDFGHJKL
 for (let l = 0; l < 9; l++) {
   let key = document.createElement("div");
   key.classList.add("key");
@@ -122,7 +132,7 @@ for (let l = 0; l < 9; l++) {
   asdfgh.append(key);
 }
 
-//!ZXCVBNM
+//Todo: ZXCVBNM
 for (let m = 0; m < 7; m++) {
   let key = document.createElement("div");
   key.classList.add("key");
@@ -159,7 +169,7 @@ for (let m = 0; m < 7; m++) {
   zxcvbn.append(key);
 }
 
-//! ----------------------------- Lose Condition ----------------------------- */
+//! ----------------------------- Cold Emptiness of Space----------------------- */
 
 let failure = () => {
   alert("You lose, bitch");
@@ -172,6 +182,7 @@ let win = () => {
   restart.style.display = "block";
   cowboy.style.display = "block";
 
+  //Todo: Restart Button
   restart.addEventListener("click", () => {
     counter = 0;
     countNegative.innerText = `${counter}/6`;
@@ -220,4 +231,3 @@ let win = () => {
 //   startTimer(fiveMinutes, display);
 // };
 
-//! ------------------------- Cold Emptiness of Space ----------------------- */
