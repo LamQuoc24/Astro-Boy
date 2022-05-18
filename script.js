@@ -84,6 +84,10 @@ submitButt.addEventListener("click", function clickyclick() {
     if (time === 114) {
       alert("You're halfway there 😈");
     }
+    if (time === 54) {
+      alert("Space is looking lovely this time of year 😈");
+    }
+
     if (time < 0) {
       failure();
       clearInterval(interval);
