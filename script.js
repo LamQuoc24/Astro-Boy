@@ -222,8 +222,6 @@ let failure = () => {
 
     audio.pause();
     audio.currentTime = 0;
-
-
   });
 };
 //! ------------------------------ Win Condition (Space Cowboy) -------------- */
@@ -259,25 +257,19 @@ let win = () => {
 
 //! ---------------------------------- Countdown ------------------------------ */
 
-// let startTimer = (duration, display) => {
-//   let timer = duration, minutes, seconds;
-//   setInterval(function () {
-//       minutes = parseInt(timer / 60, 10)
-//       seconds = parseInt(timer % 60, 10);
+const startingMinutes = 3;
+let time = (startingMinutes * 60)+46;
+let countD = document.querySelector(".countD");
+let interval = setInterval(updateCountdown, 1000);
 
-//       minutes = minutes < 10 ? "0" + minutes : minutes;
-//       seconds = seconds < 10 ? "0" + seconds : seconds;
-
-//       display.textContent = minutes + ":" + seconds;
-
-//       if (--timer < 0) {
-//           timer = duration;
-//       }
-//   }, 1000);
-// }
-
-// window.onload = function () {
-//   let fiveMinutes = 60 * 5,
-//       display = document.querySelector('#time');
-//   startTimer(fiveMinutes, display);
-// };
+function updateCountdown() {
+  const minutes = Math.floor(time / 60);
+  let seconds = time % 60;
+  seconds = seconds < 10? "0" + seconds : seconds;
+  countD.innerHTML = `${minutes}: ${seconds}`;
+  time--;
+  if (time < 0) {
+    alert("Game Over");
+    clearInterval(interval);
+  }
+}
