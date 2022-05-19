@@ -33,6 +33,12 @@ let moButt = document.querySelector(".mo-butt");
 let modalFail = document.querySelector(".failure-grey");
 let failButt = document.querySelector(".fail-button");
 
+//Todo: Countdown
+let startingMinutes = 3;
+let time = startingMinutes * 60 + 46;
+let countD = document.querySelector(".countD");
+// let interval = setInterval(updateCountdown, 1000);
+
 //! ------------------------------ Clicky Clicky ----------------------------- */
 
 let wordSubmitted = [];
@@ -66,10 +72,10 @@ submitButt.addEventListener("click", function clickyclick() {
 
   moButt.addEventListener("click", closeModal);
 
-  //! ---------------------------------- Countdown ------------------------------ */
-  let startingMinutes = 3;
-  let time = startingMinutes * 60 + 46;
-  let countD = document.querySelector(".countD");
+  //! ------------- Countdown --------------- */
+  // let startingMinutes = 3;
+  // let time = startingMinutes * 60 + 46;
+  // let countD = document.querySelector(".countD");
   let interval = setInterval(updateCountdown, 1000);
 
   function updateCountdown() {
@@ -234,6 +240,7 @@ let failure = () => {
   restart.addEventListener("click", () => {
     counter = 0;
     countNegative.innerText = `${counter}/6`;
+    time = startingMinutes * 60 + 46;
     restart.style.display = "none";
     cowboy.style.display = "none";
     submitInput.value = "";
@@ -263,6 +270,7 @@ let win = () => {
   restart.addEventListener("click", () => {
     counter = 0;
     countNegative.innerText = `${counter}/6`;
+    time = startingMinutes * 60 + 46;
     rocket.style.backgroundImage = "URL('/imgs/State=1 Error.png')";
     restart.style.display = "none";
     cowboy.style.display = "none";
