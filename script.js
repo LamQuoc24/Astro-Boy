@@ -38,6 +38,8 @@ let startingMinutes = 3;
 let time = startingMinutes * 60 + 46;
 let countD = document.querySelector(".countD");
 // let interval = setInterval(updateCountdown, 1000);
+//!Set function to 0!
+
 
 //! ------------------------------ Clicky Clicky ----------------------------- */
 
@@ -73,9 +75,7 @@ submitButt.addEventListener("click", function clickyclick() {
   moButt.addEventListener("click", closeModal);
 
   //! ------------- Countdown --------------- */
-  // let startingMinutes = 3;
-  // let time = startingMinutes * 60 + 46;
-  // let countD = document.querySelector(".countD");
+
   let interval = setInterval(updateCountdown, 1000);
 
   function updateCountdown() {
@@ -236,6 +236,8 @@ let failure = () => {
   };
 
   failButt.addEventListener("click", closeModal);
+
+  //Todo: Restart
   restart.style.display = "block";
   restart.addEventListener("click", () => {
     counter = 0;
@@ -288,5 +290,6 @@ let win = () => {
 
     audio.pause();
     audio.currentTime = 0;
+    clearInterval(interval);
   });
 };
