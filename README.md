@@ -7,7 +7,7 @@ The game is called Astro Boy on the pun of the original title: Space Man. The ga
 
 
 ## Images
-	![Preview](imgs/Preview.jpg)
+![](imgs/Preview.jpg)
 
 ## Technologies
 * HTML
