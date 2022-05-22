@@ -5,6 +5,10 @@
 ## General Info
 The game is called Astro Boy on the pun of the original title: Space Man. The game is also refered to as Snowman and Hangman. The title is also a nod to the famous classic manga: Astro Boy. The project assignment was designed to test my abilities with HTML, CSS, and Vanilla Javascript. A lot of the small features are implemented with a space theme in mind.
 
+
+## Images
+	![Preview](/Users/frostycakes/Desktop/sei/projects/Astro-Boy/imgs/Preview.jpg)
+
 ## Technologies
 * HTML
 * CSS
